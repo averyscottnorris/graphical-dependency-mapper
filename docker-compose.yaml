@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  webapp:
+    build: dependency-webapp-client/.
+    image: averyscottnorris/dependency-webapp-client
+    ports:
+      - "8080:8080"
+  api:
+    build: dependency-api-backend/.
+    image: averyscottnorris/dependency-api-backend
+    ports:
+      - "3001:3001"
